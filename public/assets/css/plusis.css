@@ -1,0 +1,184 @@
+/**-----------------------------------CLASES PERSONALIZADAS NILTON---------------------------------------------------------*/
+
+
+
+
+.intermedio{
+
+  background-color:#ffeccb;
+  border: 1px dashed #ff5a07;
+  padding: 8px;
+  margin-bottom: 10px;
+  }
+  
+
+ .aprobado{
+
+background-color: #E9FCFA;
+border: 1px dashed #006600;
+padding: 8px;
+margin-bottom: 10px;
+}
+
+.rechazado{
+
+background-color: #FFEDED;
+border: 1px dashed #FA206A;
+padding: 8px;
+margin-bottom: 10px;
+}
+
+.div_modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #002640;
+  opacity: .80;
+  -webkit-opacity: .8;
+  -moz-opacity: .8;
+  filter: alpha(opacity=80);
+  z-index: 1040;
+}
+
+
+.div_contenido {
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 #222;
+  -webkit-box-shadow: 0 0 20px 0 #222;
+  -moz-box-shadow: 0 0 20px 0 #222;
+  display: none;
+  height: auto;
+  margin-left: 2%;
+  margin-right: 2%;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  position: absolute;
+  top: 6%;
+  width: auto;
+  min-height: 90%;
+  z-index: 1050;
+}
+
+.pagination .page-item.active .page-link {
+
+  background-color:red !important;
+  
+}
+
+.pagination .page-item .page-link {
+
+  background-color: white;
+ 
+}
+
+.nav-tabs {
+ 
+  background-color: #4c4c4c !important;
+ 
+}
+.tab-content {
+
+   -webkit-box-shadow: none;
+   box-shadow: none;
+}
+
+.input-disable{
+  background-color: #dee3e6;
+
+}
+
+#tabla-usuarios-correo_length{
+
+  display:none !important;
+}
+
+#tabla-usuarios-correo_filter {
+
+  float: left !important;
+  text-align: left !important;
+  width: 100%;
+  padding-top: 10px;
+  background-color: #e1e4e5;
+}
+
+
+#tabla-usuarios-correo_filter label{
+  width: 100%;
+  margin-bottom:10px !important;
+}
+
+
+#tabla-grupos-correo_length{
+
+  display:none !important;
+}
+
+#tabla-grupos-correo_filter {
+
+  float: left !important;
+  text-align: left !important;
+  width: 100%;
+  padding-top: 10px;
+  background-color: #e1e4e5;
+}
+
+
+#tabla-grupos-correo_filter label{
+  width: 100%;
+  margin-bottom:10px !important;
+}
+
+
+
+
+.dataTables_wrapper .dataTables_filter input {
+  
+    width: 70% !important;
+}
+
+
+#tabla-usuarios-correoA_length{
+
+  display:none !important;
+}
+
+#tabla-usuarios-correoA_filter {
+
+  float: left !important;
+  text-align: left !important;
+  width: 100%;
+  padding-top: 10px;
+  background-color: #e1e4e5;
+}
+
+
+#tabla-usuarios-correoA_filter label{
+  width: 100%;
+  margin-bottom:10px !important;
+}
+
+
+
+#tabla-grupos-correoA_length{
+
+  display:none !important;
+}
+
+#tabla-grupos-correoA_filter {
+
+  float: left !important;
+  text-align: left !important;
+  width: 100%;
+  padding-top: 10px;
+  background-color: #e1e4e5;
+}
+
+
+#tabla-grupos-correoA_filter label{
+  width: 100%;
+  margin-bottom:10px !important;
+}

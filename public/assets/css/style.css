@@ -1,0 +1,59 @@
+/* Your custom styles */
+table{
+    background-color: white !important;
+}
+.btn-xs{
+    line-height: 0.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0.7em;
+   
+}
+
+
+.btn-super-xs{
+    
+    font-size: .81rem;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  
+    border: 0;
+    -webkit-border-radius: .125rem;
+    border-radius: .125rem;
+    cursor: pointer;
+ 
+    color: #fff;
+   
+}
+
+
+.black-skin .btn-primary {
+    background-color: #d50000 !important;
+    color: #fff!important;
+}
+
+label{
+margin-bottom: .0rem; 
+}
+
+
+.form-group {
+  margin-bottom: 0.1rem; 
+}
+
+.col-sm-10 {
+    padding-right:0px !important;
+
+}
+table.dataTable thead {background-color:#607d8b; color:white;}
+
+.list-group-item {
+
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #d6d6d6;
+    border: 5px solid rgb(255, 255, 255);
+}
