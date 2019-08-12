@@ -242,10 +242,15 @@ function CO_activar_tabla_usuarios() {
         $('#tabla-region-correoA').DataTable().destroy();
     }
 
+     if ( $.fn.DataTable.isDataTable('#tabla-coordinadores-correoA') ) {
+        $('#tabla-coordinadores-correoA').DataTable().destroy();
+    }
+
       
       $('#sectabla_paises').hide();
-       $('#sectabla_region').hide();
+      $('#sectabla_region').hide();
       $('#sectabla_usuarios').show();
+       $('#sectabla_coordinadores').hide();
 
     
     var urlraiz=$("#url_raiz_proyecto").val();
@@ -324,10 +329,16 @@ function CO_activar_tabla_grupos() {
     }
 
 
+    if ( $.fn.DataTable.isDataTable('#tabla-coordinadores-correoA') ) {
+        $('#tabla-coordinadores-correoA').DataTable().destroy();
+    }
+
+
 
       $('#sectabla_usuarios').hide();
        $('#sectabla_region').hide();
       $('#sectabla_paises').show();
+      $('#sectabla_coordinadores').hide();
       
       
     
@@ -414,11 +425,16 @@ function CO_activar_tabla_regiones() {
         $('#tabla-region-correoA').DataTable().destroy();
     }
 
+     if ( $.fn.DataTable.isDataTable('#tabla-coordinadores-correoA') ) {
+        $('#tabla-coordinadores-correoA').DataTable().destroy();
+    }
+
 
 
       $('#sectabla_usuarios').hide();
       $('#sectabla_paises').hide();
       $('#sectabla_region').show();
+      $('#sectabla_coordinadores').hide();
       
       
     
@@ -451,6 +467,92 @@ function CO_activar_tabla_regiones() {
     $('.preloader').hide();
 }
 
+
+function CO_activar_tabla_coordinadores() {
+   $('#correo_paraM').val('');
+   $('#correo_para').val('');
+   Window.correosarrayNT=[];
+   Window.gruposarrayNT=[];
+   Window.regionarrayNT=[];
+   $('.preloader').show();
+    $.fn.dataTable.ext.errMode = 'throw';
+
+
+    if ( $.fn.DataTable.isDataTable('#tabla-usuarios-correoA') ) {
+        $('#tabla-usuarios-correoA').DataTable().destroy();
+        
+      }
+
+      if ( $.fn.DataTable.isDataTable('#tabla-grupos-correoA') ) {
+        $('#tabla-grupos-correoA').DataTable().destroy();
+    }
+
+     if ( $.fn.DataTable.isDataTable('#tabla-region-correoA') ) {
+        $('#tabla-region-correoA').DataTable().destroy();
+    }
+
+     if ( $.fn.DataTable.isDataTable('#tabla-coordinadores-correoA') ) {
+        $('#tabla-coordinadores-correoA').DataTable().destroy();
+    }
+
+      
+      $('#sectabla_paises').hide();
+      $('#sectabla_region').hide();
+      $('#sectabla_usuarios').hide();
+       $('#sectabla_coordinadores').show();
+
+    
+    var urlraiz=$("#url_raiz_proyecto").val();
+    $('#tabla-usuarios-correoA').DataTable({
+            /*processing: true,
+            serverSide: true,*/
+             processing: true,
+            pageLength: 100,
+           
+             initComplete: function(){
+             
+                  var tableusuarios =  $('#tabla-coordinadores-correoA').DataTable() ;
+                  var codigotool='<a style="float:right; margin-right:5px; display:none;" id="DTB_marcartodos" onclick="CO_marcarfiltro();"><i class="fa fa-check-square-o" id="icono_marcar_todo" style="margin-right:5px;"></i><b>Marcar todo</b></a>';
+                  $("#tabla-coordinadores-correoA_filter label").append(codigotool);
+
+                  tableusuarios.on('search.dt', function() {
+
+                   var input = $('.dataTables_filter input')[0];
+                   if(input.value!=''){ $('#DTB_marcartodos').show(); }else{ $('#DTB_marcartodos').hide(); }
+                   
+
+                  });
+
+
+             }  ,
+            language: {
+                    "url": urlraiz + "/plugins/datatables/latino.json"
+                    } ,
+            ajax: urlraiz + '/listado_coordinadores_correo',
+            columns: [
+                { data: 'id', name: 'id' },
+                { data: 'name', name: 'nombre' },
+                { data: 'email', name: 'email' },
+                { data: 'pais', name: 'pais' },
+            
+        
+        
+                { data: null,  
+            
+                render: function ( data, type, row ) {
+                    
+                    codigocheck='<div class="form-check"><input type="checkbox" onchange="CO_agregar_correo('+ data.id +','+"'"+ data.email +"'"+')" class="form-check-input" id="checkusu_'+ data.id +'"><label class="form-check-label" for="checkusu_'+ data.id +'"></label></div>';
+                    return codigocheck;  
+                    }  
+                }
+            ]
+        });
+
+    
+   
+  
+      $('.preloader').hide();
+}
 
   
   function CO_marcarfiltro(){

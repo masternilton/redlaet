@@ -75,11 +75,13 @@ class CoordinadorController extends Controller
 
 
 
-		public function listado_coordinadores_pais_region(){
+	public function listado_coordinadores_pais_region(){
 
 	   $useract=Auth::user();
 	   $region= $useract->region_rol;
 	   $clavecontinente=0;
+
+	   
 
 	   if($region=='SurAmerica'){  
 	   	$filtropaises=Paises::where("continenteid","=",442 )->get(); 
@@ -305,6 +307,8 @@ class CoordinadorController extends Controller
                    "pais"=>  $datopais , 
                    "email"=>  $datoemail, 
                    "ciudad"=>  $datociudad   );
+
+   
     return view("region.listado_usuarios_region")->with("usuario_actual",$usuario_actual)
                                                  ->with("mispaises",  $arraypaises)
                                                  ->with("filtros",  $filtros)

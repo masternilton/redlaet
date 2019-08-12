@@ -36,7 +36,7 @@
         <div class="col-lg-4">
 
 				<!--Card Dark-->
-				<div class="card card-dark"  style='border-left:10px solid red;'>
+				<div class="card card-dark"  style='border-left:5px solid red;'>
 					<!--Card image-->
 				
 					<div class="card-body dark-text ">
@@ -64,7 +64,7 @@
 		<div class="col-lg-4">
 
 				<!--Card Dark-->
-				<div class="card " style='border-left:10px solid red;'>
+				<div class="card " style='border-left:5px solid red;'>
 					<!--Card image-->
 				
 					<div class="card-body  dark-text">
@@ -91,7 +91,7 @@
 		<div class="col-lg-4">
 
 				<!--Card Dark-->
-				<div class="card card-dark"  style='border-left:10px solid red;'>
+				<div class="card card-dark"  style='border-left:5px solid red;'>
 					<!--Card image-->
 				
 					<div class="card-body dark-text">
@@ -120,7 +120,7 @@
 			<div class="col-lg-4">
 
 					<!--Card Dark-->
-					<div class="card card-dark"  style='border-left:10px solid red;'>
+					<div class="card card-dark"  style='border-left:5px solid red;'>
 						<!--Card image-->
 					
 						<div class="card-body dark-text">
@@ -185,7 +185,7 @@
 			<div class="col-lg-4">
 	
 					<!--Card Dark-->
-					<div class="card " style='border-left:10px solid red;'>
+					<div class="card " style='border-left:5px solid red;'>
 						<!--Card image-->
 					
 						<div class="card-body  dark-text">
@@ -219,7 +219,7 @@
 			<div class="col-lg-4">
 	
 					<!--Card Dark-->
-					<div class="card card-dark"  style='border-left:10px solid red;'>
+					<div class="card card-dark"  style='border-left:5px solid red;'>
 						<!--Card image-->
 					
 						<div class="card-body dark-text">
@@ -253,7 +253,7 @@
 			<div class="col-lg-4" style='margin-top:20px;' >
 	
 					<!--Card Dark-->
-					<div class="card card-dark"  style='border-left:10px solid red;'>
+					<div class="card card-dark"  style='border-left:5px solid red;'>
 						<!--Card image-->
 					
 						<div class="card-body dark-text">
@@ -279,10 +279,10 @@
 	
 			</div>
 
-					<div class="col-lg-4" style='margin-top:20px;'>
+			<div class="col-lg-4" style='margin-top:20px;'>
 	
 					<!--Card Dark-->
-					<div class="card card-dark"  style='border-left:10px solid red;'>
+					<div class="card card-dark"  style='border-left:5px solid red;'>
 						<!--Card image-->
 					
 						<div class="card-body dark-text">
@@ -311,6 +311,69 @@
 					<!--/.Card Dark-->
 	
 			</div>
+
+		
+
+			<div class="col-lg-4" style='margin-top:20px;'>
+
+				<!--Card Dark-->
+				<div class="card " style='border-left:5px solid red;'>
+					<!--Card image-->
+				
+					<div class="card-body  dark-text">
+						
+					
+						
+						<h4 class="card-title"><i class="fa fa-edit " style='color:red;'></i> Actividades</h4>
+						<hr style='color:#039be5; '>
+						<!--Text-->
+						<p class="font-small mb-4">Actividades equipo coordinadores </p>
+						@if(Auth::user()->rol==1)
+							<a href="{{ url('/coorgeneral/seccion_actividades') }}" class=" d-flex justify-content-end" style='color:red;'>
+								<h5>Ingresar</h5>
+								<span>
+									<i class="fa fa-chevron-right pl-2"></i>
+								</span>
+							</a>
+						@endif
+
+
+					   @if(Auth::user()->rol==2)
+							<a href="{{ url('/coordinador/seccion_actividades_coordinadorP') }}" class=" d-flex justify-content-end" style='color:red;'>
+								<h5>Ingresar</h5>
+								<span>
+									<i class="fa fa-chevron-right pl-2"></i>
+								</span>
+							</a>
+						@endif
+
+
+						 @if(Auth::user()->rol==3)
+							<a href="{{ url('/coordinador/seccion_actividades_coordinadorP') }}" class=" d-flex justify-content-end" style='color:red;'>
+								<h5>Ingresar</h5>
+								<span>
+									<i class="fa fa-chevron-right pl-2"></i>
+								</span>
+							</a>
+						@endif
+
+						@if(Auth::user()->rol==5)
+							<a href="{{ url('/coordinador/seccion_actividades_coordinador') }}" class=" d-flex justify-content-end" style='color:red;'>
+								<h5>Ingresar</h5>
+								<span>
+									<i class="fa fa-chevron-right pl-2"></i>
+								</span>
+							</a>
+						@endif
+
+
+
+					</div>
+					<!--/.Card content-->
+				</div>
+				<!--/.Card Dark-->
+ 
+		    </div>
 
 		
 

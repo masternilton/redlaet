@@ -90,13 +90,14 @@ class NotificacionesController extends Controller
           $pushnoti=pushNoticias::where('estado','=',1)->where('para','=',$iduser)->first();
           $countnoticias=0;
           $fecha_ultimo_acceso=date("Y-m-d");
-          if(count($pushnoti)>0 ){
+          if($pushnoti ){
              $fecha_ultimo_acceso=$pushnoti->fecha_ultimo_acceso;
              
           }
 
           $entradas=EntradasWP::where('post_status','=', 'publish')->where('post_content','!=', '')->where('post_type','=', 'post')->where('post_date','>', $fecha_ultimo_acceso )->limit(10)->get();
-           $countnoticias=count($entradas);
+          
+          $countnoticias=$entradas->count();
 
           $iduser=Auth::user()->id;
           $countmensajes=Mensajes::where('estado','=',1)->where('para','=',$iduser)->count();

@@ -120,6 +120,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('form_correo', 'CorreoController@form_correo');
     Route::get('seccion_correo', 'CorreoController@seccion_correo');
     Route::resource('listado_usuarios_correo', 'CorreoController@data_usuarios_correo');
+      Route::resource('listado_coordinadores_correo', 'CorreoController@data_coordinadores_correo');
+    
     Route::post('enviar_correo', 'CorreoController@enviar_correo');
     Route::resource('listado_grupos_correo', 'CorreoController@data_grupos_correo');
     Route::post('enviar_correo_grupo', 'CorreoController@enviar_correo_grupos');
@@ -195,17 +197,42 @@ Route::group(['middleware' => 'auth'], function () {
 
       
       Route::get('listado_coordinadoreszona_coor', 'CoordinadorController@listado_coordinadoreszona_coor');
-
       Route::get('listado_coordinadorespais_coor', 'CoordinadorController@listado_coordinadorespais_coor');
+      Route::get('listado_coordinadoresregion_coor', 'CoordinadorController@listado_coordinadoresregion_coor');
+      Route::post('listado_usuarioscoor_filtro', 'CoordinadorController@listado_usuarioscoor_filtro');
+      Route::post('recuperarle_password_usuario', 'UsuariosController@recuperarle_password_usuario');
 
-       Route::get('listado_coordinadoresregion_coor', 'CoordinadorController@listado_coordinadoresregion_coor');
+      Route::get('coorgeneral/seccion_actividades', 'ActividadesController@seccion_actividades');
+      Route::get('coorgeneral/seccion_actividades_completas', 'ActividadesController@seccion_actividades_completas');
+      Route::get('coorgeneral/form_nueva_actividad', 'ActividadesController@form_nueva_actividad');
+      Route::get('coorgeneral/form_editar_actividad/{idact}', 'ActividadesController@form_editar_actividad');
+      Route::post('coorgeneral/crear_actividad', 'ActividadesController@crear_actividad');
+      Route::post('coorgeneral/borrar_actividad', 'ActividadesController@borrar_actividad');
+      Route::post('coorgeneral/completar_actividad', 'ActividadesController@completar_actividad');
+      Route::post('coorgeneral/editar_actividad', 'ActividadesController@editar_actividad');
+     
+      Route::get('coordinador/seccion_actividades_coordinador', 'ActividadesController@seccion_actividades_coordinador');
+      Route::get('coordinador/seccion_actividades_completas_coordinador', 'ActividadesController@seccion_actividades_completas_coordinador');
+      Route::get('coordinador/form_nueva_actividad_R', 'ActividadesController@form_nueva_actividad_R');
 
-       Route::post('listado_usuarioscoor_filtro', 'CoordinadorController@listado_usuarioscoor_filtro');
+      Route::post('coordinador/crear_actividad_R', 'ActividadesController@crear_actividad_R');
+      Route::get('coordinador/form_editar_actividad_R/{idact}', 'ActividadesController@form_editar_actividad_R');
+      Route::post('coordinador/editar_actividad_R', 'ActividadesController@editar_actividad_R');
+      Route::post('coordinador/completar_actividad_R', 'ActividadesController@completar_actividad_R');
+      Route::post('coordinador/borrar_actividad_R', 'ActividadesController@borrar_actividad_R');
 
-        Route::post('recuperarle_password_usuario', 'UsuariosController@recuperarle_password_usuario');
+      Route::get('coordinador/seccion_actividades_coordinadorP', 'ActividadesController@seccion_actividades_coordinadorP');
+      Route::get('coordinador/seccion_actividades_coordinadorP_completas', 'ActividadesController@seccion_actividades_coordinadorP_completas');
 
+      Route::get('coordinador/form_nueva_actividad_P', 'ActividadesController@form_nueva_actividad_P');
+      Route::get('coordinador/form_editar_actividad_P/{idact}', 'ActividadesController@form_editar_actividad_P');
 
-   
+      Route::post('coordinador/crear_actividad_P', 'ActividadesController@crear_actividad_P');
+      Route::post('coordinador/editar_actividad_P', 'ActividadesController@editar_actividad_P');
+      Route::post('coordinador/completar_actividad_P', 'ActividadesController@completar_actividad_P');
+      Route::post('coordinador/borrar_actividad_P', 'ActividadesController@borrar_actividad_P');
+
+     
       
 
 });

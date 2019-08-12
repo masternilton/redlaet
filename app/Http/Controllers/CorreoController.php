@@ -42,6 +42,13 @@ class CorreoController extends Controller
      
     }
 
+
+    public function data_coordinadores_correo(){
+
+            return Datatables::of( User::where('rol','!=',4)->get()   )->make(true);
+     
+    }
+
     public function data_grupos_correo(){
 
         return Datatables::of( Paises::where("estado","=",1)->where("nombre","!=","")->get()   )->make(true);

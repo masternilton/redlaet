@@ -21,7 +21,10 @@
     <link href="{{ asset('/assets/plugins/sweetalert/sweetalert.css') }} " rel="stylesheet" type="text/css">
     <link href="{{ asset('/plugins/datatables/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('/assets/css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/assets/css/BsMultiSelect.min.css') }}" >
     <link href="{{ asset('/assets/css/plusis.css') }}" rel="stylesheet">
+
+
     
     
       <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">

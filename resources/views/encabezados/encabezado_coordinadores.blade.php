@@ -8,8 +8,8 @@
 
 
                     @if( Auth::user()->rol==2)
-                    <h3><b>Coordinador Pais</b></h3>
-                     <h6 class="box-title">{{$usuario_actual->name}} -- Coordinador Pais {{ $usuario_actual->pais_rol }}</h6>  
+                    <h3><b>Coordinador País</b></h3>
+                     <h6 class="box-title">{{$usuario_actual->name}} -- Coordinador País {{ $usuario_actual->pais_rol }}</h6>  
                     @endif
 
                     @if( Auth::user()->rol==3)

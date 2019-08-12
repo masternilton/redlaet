@@ -15,7 +15,10 @@
 <script src="{{ asset('/js/noticias.js') }}"></script>
 <script src="{{ asset('/js/mensajes.js') }}"></script>
 <script src="{{ asset('/js/notificaciones.js') }}"></script>
+<script src="{{ asset('/js/actividades.js') }}"></script>
 <script src="{{ asset('/assets/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('/assets/plugins/BsMultiSelect.min.js') }}"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
 

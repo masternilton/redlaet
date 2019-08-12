@@ -58,6 +58,8 @@
                             <a href="javascript:void(0);" onclick="CO_activar_tabla_grupos();" class="btn btn-sm  blue-grey waves-effect waves-light"><i class="fa fa-users" style="margin-right:10px;"> </i>Paises</a>
 
                             <a href="javascript:void(0);" onclick="CO_activar_tabla_regiones();" class="btn btn-sm  blue-grey waves-effect waves-light"><i class="fa fa-users" style="margin-right:10px;"> </i>Regiones</a>
+
+                             <a href="javascript:void(0);" onclick="CO_activar_tabla_coordinadores();" class="btn btn-sm  blue-grey waves-effect waves-light"><i class="fa fa-users" style="margin-right:10px;"> </i>Coordinadores</a>
                 </div>
               
                <div id='sectabla_usuarios'  style='display:none;'>
@@ -109,6 +111,30 @@
                     </thead>
                     </table>
             </div>
+
+
+            <div id='sectabla_coordinadores'  style='display:none;'>
+
+               <table class="table table-hover" id="tabla-coordinadores-correoA" style='width: 100% !important;'>
+                    <thead >
+                       
+                            <th>id</th>
+                            <th>nombre</th>
+                         
+                            <th>email</th>
+                            <th>pais</th>
+                          
+                      
+                            <th>anexar</th>
+                     
+                    </thead>
+                </table>
+
+            </div>
+
+
+
+          
            
         
                                

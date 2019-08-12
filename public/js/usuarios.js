@@ -20,6 +20,8 @@ function  verinfo_usuario(arg){
 }
 
 
+
+
 function  verinfo_usuario_publico(arg){
 
   $('#modal_info_usuarios').modal();
